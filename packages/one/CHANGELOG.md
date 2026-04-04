@@ -1,3 +1,14 @@
+## [1.2.0](https://github.com/incutonez/semantic-mono/compare/@incutonez/semantic-mono-one@1.1.0...@incutonez/semantic-mono-one@1.2.0) (2026-04-04)
+
+### Features
+
+* Fixing Build ([3279b4b](https://github.com/incutonez/semantic-mono/commit/3279b4bc68cf473738053ef955163de761648e6f))
+* Fixing Build ([#3](https://github.com/incutonez/semantic-mono/issues/3)) ([c63c483](https://github.com/incutonez/semantic-mono/commit/c63c4830a0937231be6923f3ecca6bb990199382))
+* Updating one and three ([9e6ac2d](https://github.com/incutonez/semantic-mono/commit/9e6ac2d5e285ec4d7cdff59851ee71621f6ac176))
+* Updating one and three ([#5](https://github.com/incutonez/semantic-mono/issues/5)) ([91f7d95](https://github.com/incutonez/semantic-mono/commit/91f7d956cabadf6246edc80f365fc8dbf888e204))
+* Updating one and three to 1.2 but not two ([5a1653b](https://github.com/incutonez/semantic-mono/commit/5a1653b2af1d6fdf7999f7c888b9b303bf28b81a))
+* Updating one and three to 1.2 but not two ([#4](https://github.com/incutonez/semantic-mono/issues/4)) ([3b07e15](https://github.com/incutonez/semantic-mono/commit/3b07e15495fc79a801002911e0034d2794599a25))
+
 ## [1.1.0](https://github.com/incutonez/semantic-mono/compare/@incutonez/semantic-mono-one@1.0.0...@incutonez/semantic-mono-one@1.1.0) (2026-04-04)
 
 ### Features
