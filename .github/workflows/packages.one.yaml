@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - packages/one
+      - packages/one/**
 jobs:
   release:
     environment: main
