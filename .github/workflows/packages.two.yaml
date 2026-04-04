@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - packages/two
 jobs:
   release:
     environment: main
@@ -31,4 +33,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
-        run: npm run update:versions
+        run: npm run update:versions -- two
