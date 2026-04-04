@@ -1,0 +1,31 @@
+{
+  "name": "@incutonez/semantic-mono",
+  "version": "1.0.0",
+  "description": "Example of semantic release working in a mono repo/npm workspaces",
+  "homepage": "https://github.com/incutonez/semantic-mono#readme",
+  "bugs": {
+    "url": "https://github.com/incutonez/semantic-mono/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incutonez/semantic-mono.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "update:versions": "npx tsx ./updateVersions.ts"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/exec": "7.1.0",
+    "@semantic-release/git": "10.0.1",
+    "@types/node": "25.5.2",
+    "conventional-changelog-conventionalcommits": "9.3.1",
+    "semantic-release": "25.0.3"
+  }
+}
