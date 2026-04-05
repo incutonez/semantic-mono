@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/incutonez/semantic-mono/compare/@incutonez/semantic-mono-three@1.2.0...@incutonez/semantic-mono-three@1.2.1) (2026-04-05)
+
+### Bug Fixes
+
+* Updating Three ([f6589ab](https://github.com/incutonez/semantic-mono/commit/f6589ab24411060ee54140bd273e74e2a6c07c50))
+* Updating Three ([#9](https://github.com/incutonez/semantic-mono/issues/9)) ([8fba4cf](https://github.com/incutonez/semantic-mono/commit/8fba4cf08d91bf12e17cd2c1d363e447d10e4563))
+
 ## [1.2.0](https://github.com/incutonez/semantic-mono/compare/@incutonez/semantic-mono-three@1.1.0...@incutonez/semantic-mono-three@1.2.0) (2026-04-05)
 
 ### Features
