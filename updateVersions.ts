@@ -2,14 +2,16 @@
 import { existsSync } from "node:fs";
 
 const stdio = [0, 1, 2];
-const files = process.argv[2] ?? [];
-if (!files.length) {
-	throw new Error("Nothing to update");
+try {
+	const files = JSON.parse(process.argv[2]);
+	console.log('here', typeof files)
+}
+catch (ex) {
+	throw ex;
 }
 // files.forEach((file) => {
 //
 // })
-console.log('here', typeof files)
 // const cwd = `packages/${process.argv[2]}`;
 // if (!existsSync(cwd)) {
 // 	throw new Error("cwd is invalid");
