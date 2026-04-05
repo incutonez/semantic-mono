@@ -38,4 +38,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
-        run: npm run update:versions -- ${{ steps.filter.outputs.packages_files }}
+        run: npm run update:versions -- ${{ toJSON(steps.filter.outputs.packages_files) }}
