@@ -4,8 +4,29 @@ on:
     branches:
       - main
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    outputs:
+      # Expose matched filters as job 'packages' output variable
+      packages: ${{ steps.filter.outputs.changes }}
+    steps:
+      # For pull requests it's not necessary to checkout the code
+      - uses: dorny/paths-filter@v4
+        id: filter
+        with:
+          filters: |
+            packages/**
   release:
+    needs: changes
     environment: main
+    strategy:
+      matrix:
+        # Parse JSON array containing names of all filters matching any of changed files
+        # e.g. ['package1', 'package2'] if both package folders contains changes
+        package: ${{ fromJSON(needs.changes.outputs.packages) }}
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
@@ -19,16 +40,11 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: dorny/paths-filter@v4
-        id: filter
-        with:
-          filters: |
-            one:
-              - 'packages/one/**'
-            two:
-              - 'packages/two/**'
-            three:
-              - 'packages/three/**'
+          # https://github.com/dorny/paths-filter?tab=readme-ov-file#custom-processing-of-changed-files
+      - name: Do Changes
+        env:
+          PACKAGES: ${{ fromJSON(needs.changes.outputs.packages) }}
+        run: echo "$PACKAGES"
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
