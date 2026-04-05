@@ -4,7 +4,7 @@ import { existsSync } from "node:fs";
 const stdio = [0, 1, 2];
 try {
 	const files = JSON.parse(process.argv[2]);
-	console.log('here', typeof files)
+	console.log('here', files)
 }
 catch (ex) {
 	throw ex;
