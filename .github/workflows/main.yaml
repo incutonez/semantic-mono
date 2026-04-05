@@ -24,11 +24,10 @@ jobs:
         with:
           list-files: 'json'
           filters: |
-            packages: packages/**
+            packages:
+              - 'packages/**/**'
       - name: Do Changes
-        env:
-          PACKAGES: ${{ fromJSON(steps.filter.outputs.filters_files) }}
-        run: echo "$PACKAGES"
+        run: echo ${{ steps.filter.outputs.filters_files }}
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
