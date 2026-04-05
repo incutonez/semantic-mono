@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/incutonez/semantic-mono/compare/@incutonez/semantic-mono-two@1.2.0...@incutonez/semantic-mono-two@1.2.1) (2026-04-05)
+
+### Bug Fixes
+
+* Updating two and three ([6f9c53c](https://github.com/incutonez/semantic-mono/commit/6f9c53ce06110b20d69390653c4df9091f12add4))
+* Updating two and three ([#18](https://github.com/incutonez/semantic-mono/issues/18)) ([14d2e80](https://github.com/incutonez/semantic-mono/commit/14d2e804b475cb0e0828e0df507406dfa0865187))
+
 ## [1.2.0](https://github.com/incutonez/semantic-mono/compare/@incutonez/semantic-mono-two@1.1.0...@incutonez/semantic-mono-two@1.2.0) (2026-04-05)
 
 ### Features
