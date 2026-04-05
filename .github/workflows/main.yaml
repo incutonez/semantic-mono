@@ -27,7 +27,7 @@ jobs:
             packages: packages/**
       - name: Do Changes
         env:
-          PACKAGES: ${{ steps.filter.outputs.filters_files }}
+          PACKAGES: ${{ fromJSON(steps.filter.outputs.filters_files) }}
         run: echo "$PACKAGES"
       - name: Setup Node.js
         uses: actions/setup-node@v4
