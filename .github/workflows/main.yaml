@@ -18,7 +18,8 @@ jobs:
         id: filter
         with:
           filters: |
-            packages/**/**
+            packages:
+              - packages/**
   release:
     needs: changes
     environment: main
