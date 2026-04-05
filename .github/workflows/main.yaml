@@ -14,6 +14,11 @@ jobs:
       id-token: write # to enable use of OIDC for npm provenance
       packages: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - uses: dorny/paths-filter@v4
         id: filter
         with:
@@ -24,11 +29,6 @@ jobs:
               - 'packages/two/**'
             three:
               - 'packages/three/**'
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
