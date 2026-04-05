@@ -22,7 +22,7 @@ jobs:
       - uses: dorny/paths-filter@v4
         id: filter
         with:
-          list-files: 'shell'
+          list-files: 'json'
           filters: |
             packages:
               - added|modified: 'packages/**'
