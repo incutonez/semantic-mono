@@ -1,22 +1,23 @@
 ﻿import { execSync } from "child_process";
-import { existsSync } from "node:fs";
 
 const stdio = [0, 1, 2];
 try {
-	const files = JSON.parse(process.argv[2]);
-	console.log('here', files)
+	const files: string[] = JSON.parse(process.argv[2]);
+	const PackageMatch = /^packages\/([^/]*)/;
+	const Packages: Record<string, boolean> = {};
+	files.forEach((file) => {
+		const packageName = file.match(PackageMatch)[1];
+		if (packageName && !Packages[packageName]) {
+			Packages[packageName] = true;
+			console.log('doing', packageName)
+			execSync("npx semantic-release --deps.bump=inherit", {
+				stdio,
+				cwd: `packages/${packageName}`,
+			});
+		}
+	})
 }
 catch (ex) {
 	throw ex;
 }
-// files.forEach((file) => {
-//
-// })
-// const cwd = `packages/${process.argv[2]}`;
-// if (!existsSync(cwd)) {
-// 	throw new Error("cwd is invalid");
-// }
-// execSync("npx semantic-release --deps.bump=inherit", {
-// 	stdio,
-// 	cwd,
-// });
+
