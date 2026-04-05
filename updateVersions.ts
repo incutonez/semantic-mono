@@ -9,7 +9,6 @@ try {
 		const packageName = file.match(PackageMatch)[1];
 		if (packageName && !Packages[packageName]) {
 			Packages[packageName] = true;
-			console.log('doing', packageName)
 			execSync("npx semantic-release --deps.bump=inherit", {
 				stdio,
 				cwd: `packages/${packageName}`,
