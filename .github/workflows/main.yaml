@@ -22,6 +22,7 @@ jobs:
       - uses: dorny/paths-filter@v4
         id: filter
         with:
+          list-files: 'json'
           filters: |
             packages: packages/**
       - name: Do Changes
